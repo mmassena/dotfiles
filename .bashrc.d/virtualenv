@@ -1,0 +1,33 @@
+# Ghetto virtualenvwrapper
+#
+# Copyright (c) 2013 Mark Sandstrom
+# mark@deliciouslynerdy.com
+
+function mkvirtualenv() {
+    if test ! $# -eq 1; then
+        echo "usage: mkvirtualenv name"
+        return 1
+    fi
+
+    NAME=$1
+    LOCATION=$VIRTUALENVS/$NAME
+
+    if test ! -e $LOCATION; then
+        virtualenv $LOCATION
+        workon $NAME
+    else
+        echo "$NAME already exists"
+    fi
+}    
+
+function workon() {
+    source $VIRTUALENVS/$1/bin/activate
+}
+
+function _workon_complete() {
+    pushd $VIRTUALENVS
+    COMPREPLY=($(compgen -d $2))
+    popd
+} > /dev/null
+
+complete -F _workon_complete workon
