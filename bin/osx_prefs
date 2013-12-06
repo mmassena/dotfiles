@@ -22,4 +22,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 60
 
+# plists
+cp ~/.plist/* ~Library/Preferences/
+
 echo "Settings modified, but you will need to relog for them to take effect"
