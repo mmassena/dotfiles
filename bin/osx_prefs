@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# dock size
+defaults write com.apple.dock tilesize -integer 36; killall Dock
+
+# Trackpad -> Point & Click -> Tracking Speed
+# Default: ?; Slow: 0; Fast: 3
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 1.5
+
+# Mouse
+#defaults write -globalDomain com.apple.mouse.scaling -float 6
+
+# Keyboard -> Key Repeat
+# (Default: 6; Slow: 120; Fast: 2)
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+# Keyboard -> Delay Until Repeat
+# (Default: 68; Long: 120; Short: 15)
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
+
+# require password 1 minute after sleep or screen saver beings
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 60
+
+echo "Settings modified, but you will need to relog for them to take effect"
