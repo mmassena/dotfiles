@@ -1,12 +1,26 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
+.Xauthority
 .bash_history
+.cache
+.calibre_calibre GUI.lock
 .dropbox
+.fontconfig/
+.gitk
 .keepassx
 .lesshst
+.notes/
+.npm/
+.pip/
+.rnd
 .ssh
+.subversion/
 .viminfo
+.virtualenvs/
+.wireshark-etc/
+.wireshark/
+Calibre Library
 Desktop
 Documents
 Downloads
@@ -16,3 +30,4 @@ Movies
 Music
 Pictures
 Public
+repos/
