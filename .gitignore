@@ -16,6 +16,8 @@
 .rnd
 .ssh
 .subversion/
+.vim/bundle/
+.vim/.netrwhist
 .viminfo
 .virtualenvs/
 .wireshark-etc/
